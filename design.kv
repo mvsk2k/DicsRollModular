@@ -1,0 +1,27 @@
+<MyScreen>:
+    AnchorLayout:
+        anchor_x: 'center'
+        anchor_y: 'top'
+        MDTopAppBar:
+            title: "DiceRoller"
+        RelativeLayout:
+            Image:
+                id: dice_state
+                size_hint_y: 0.3
+                size_hint_x: 0.3
+                pos_hint: {'center_x': 0.5, 'center_y': 0.5 }
+                source: "assets/dice_1.png"
+            MDRaisedButton:
+                id: roll_button
+                text: 'ROLL'
+                pos_hint: {'center_x': 0.5, 'center_y': 0.3}
+                on_release: root.play()
+
+
+<RootWidget>:
+    MyScreen:
+        name: "Dice_Screen"
+
+
+
+
